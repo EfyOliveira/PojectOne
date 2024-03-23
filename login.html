@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <ul class="tabs">
+  <div id="login" class="tab-content">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Usuário:</label><br>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Senha:</label><br>
+      <input type="password" id="password" name="password" required><br>
+      <a href="mailto:seuemail@example.com" style="color: red;">Esqueci a senha</a><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <footer>&copy; 2024 BHU-01 Hacker Space</footer>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Impede o envio do formulário padrão
+  
+  // Verifica as credenciais
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  // Verifica se as credenciais são válidas (substitua isso com sua lógica de autenticação)
+  if (username === "seu_nome_de_usuario" && password === "sua_senha") {
+    // Redireciona para a página inicial
+    window.location.href = "index.html";
+  } else {
+    alert("Credenciais inválidas. Por favor, tente novamente.");
+  }
+});
+</script>
+
+</body>
+</html>
